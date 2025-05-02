@@ -2,12 +2,37 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import PhotoTile from "$lib/PhotoTile.svelte";
     import Title from "$lib/Title.svelte";
+    import {onDestroy, onMount} from "svelte";
+
+    let title = "photography ";
+    let titleSpace = 12;
+    let titleRoller : number;
+    let rolledTitle = "burdne.com/loading...";
+    let roll = 0;
+
+    onMount(() => {
+        titleRoller = setInterval(() => {
+            rolledTitle = "burdne.com/"
+            for (let i = 0; i < titleSpace; i++) {
+                rolledTitle += title[(roll + i) % title.length];
+            }
+            roll++;
+        }, 1000);
+    });
+
+    onDestroy(() => {
+        clearInterval(titleRoller);
+    });
 </script>
+
+<svelte:head>
+    <title>{rolledTitle}</title>
+</svelte:head>
 
 <main>
     <ToolBar />
     <div id="body">
-        <Title text="&blk14;&blk12;&blk34;&block; April 5th Protest [HANDS OFF] &block;&blk34;&blk12;&blk14;"/>
+        <Title text="April 5th Protest [HANDS OFF]"/>
         <div id="section">
             <PhotoTile photo="photos/april5thProtest/_MG_5456.jpg" alt="hi"/>
             <PhotoTile photo="photos/april5thProtest/_MG_5458.jpg" alt="hi"/>
@@ -16,7 +41,7 @@
             <PhotoTile photo="photos/april5thProtest/_MG_5545.jpg" alt="hi"/>
             <PhotoTile photo="photos/april5thProtest/_MG_5548.jpg" alt="hi"/>
         </div>
-        <Title text="&blk14;&blk12;&blk34;&block; Winter 2025 &block;&blk34;&blk12;&blk14;"/>
+        <Title text="Winter 2025"/>
         <div id="section">
             <PhotoTile photo="photos/winter2025/_MG_5366.jpg" alt="hi"/>
             <PhotoTile photo="photos/winter2025/_MG_5368.jpg" alt="hi"/>
@@ -27,28 +52,13 @@
 </main>
 
 <style>
-    :root {
-        font-family: 'Iosevka Web', monospace;
-        line-height: 1.5;
-        font-weight: 400;
-
-        margin: 0;
-        padding: 0;
-
-        background-color: #242424;
-
-        font-synthesis: none;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
     main {
         width: 650px;
     }
     #body {
         background: #191919;
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: 4px;
+        margin-bottom: 4px;
     }
     #section {
         display: grid;

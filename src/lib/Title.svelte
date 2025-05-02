@@ -15,7 +15,7 @@
         background: #242424;
         color: #555;
         border: 1px solid #555;
-        padding: 8px 4px;
+        padding: 10px 4px;
         font-family: 'Iosevka Web', monospace;
         font-stretch: expanded;
         text-overflow: ellipsis;

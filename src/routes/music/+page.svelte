@@ -2,7 +2,7 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import {onDestroy, onMount} from "svelte";
 
-    let title = "home ";
+    let title = "music ";
     let titleSpace = 12;
     let titleRoller : number;
     let rolledTitle = "burdne.com/loading...";
@@ -34,7 +34,7 @@
             &block;&blk34;&blk12;&blk14;
         </button>
         <button>
-            &blk14;&blk14;&blk14; HOME PAGE UNDER CONSTRUCTION &blk14;&blk14;&blk14;
+            &blk14;&blk14;&blk14; MUSIC PAGE UNDER CONSTRUCTION &blk14;&blk14;&blk14;
         </button>
     </div>
 </main>

@@ -3,7 +3,7 @@
 </script>
 
 <div class="photoTile">
-    <img class="photoTileImg" src={photo} alt={alt}>
+    <a href={photo}><img class="photoTileImg" src={photo} alt={alt}></a>
     <div class="photoTileGlass">
         <button>
             &bigotimes; &blk34;&blk12;&blk14; open your eyes &blk14;&blk12;&blk34; &bigotimes;
@@ -44,6 +44,6 @@
     }
     button {
         background: transparent;
-        border: 1px solid white;
+        border: 1px dotted white;
     }
 </style>

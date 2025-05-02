@@ -28,7 +28,7 @@ button {
   cursor: pointer;
   font-family: 'Iosevka Web', monospace;
   font-stretch: expanded;
-  text-overflow: ellipsis;
+  text-wrap: pretty;
 }
 button:hover {
   border: 1px solid white;

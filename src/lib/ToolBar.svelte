@@ -6,19 +6,19 @@
     <a href="./"><button>
         &larr; home
     </button></a>
-    <a href="./"><button>
+    <a href="/about"><button>
         [&fnof;] about
     </button></a>
-    <a href="./"><button>
+    <a href="/links"><button>
         &ac; links
     </button></a>
     <a href="/photography"><button>
-        &boxbox; photography
+        &boxbox; photos
     </button></a>
-    <a href="./"><button>
+    <a href="/music"><button>
         &bigodot; music
     </button></a>
-    <a href="./"><button>
+    <a href="/projects"><button>
         &dtdot; projects
     </button></a>
 </div>
@@ -27,12 +27,13 @@
     .toolbar {
         display: flex;
         justify-content: space-between;
+        margin-top: 4px;
         top: 0;
         left: 0;
         position: sticky;
         width: 100%;
         background-color: #191919;
         z-index: 100;
-        box-shadow: 0 4px 8px #242424;
+        box-shadow: 0 0 8px #242424;
     }
 </style>
