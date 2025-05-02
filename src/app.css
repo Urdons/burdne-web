@@ -1,0 +1,40 @@
+:root {
+  font-family: 'Iosevka Web', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: #242424;
+  color: white;
+  font-size: 14px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+button {
+  background: #242424;
+  color: white;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Iosevka Web', monospace;
+  font-stretch: expanded;
+  text-overflow: ellipsis;
+}
+button:hover {
+  border: 1px solid white;
+}
+button:active {
+  background: white;
+  color: black;
+  border: 1px solid white;
+}
