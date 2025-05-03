@@ -1,33 +1,11 @@
 <script lang="ts">
     import ToolBar from "$lib/ToolBar.svelte";
-    import {onDestroy, onMount} from "svelte";
-
-    let title = "music ";
-    let titleSpace = 12;
-    let titleRoller : number;
-    let rolledTitle = "burdne.com/loading...";
-    let roll = 0;
-
-    onMount(() => {
-        titleRoller = setInterval(() => {
-            rolledTitle = "burdne.com/"
-            for (let i = 0; i < titleSpace; i++) {
-                rolledTitle += title[(roll + i) % title.length];
-            }
-            roll++;
-        }, 500);
-    });
-
-    onDestroy(() => {
-        clearInterval(titleRoller);
-    });
+    import ScrollingTitle from "$lib/ScrollingTitle.svelte";
+    import Footer from "$lib/Footer.svelte";
 </script>
 
-<svelte:head>
-    <title>{rolledTitle}</title>
-</svelte:head>
-
 <main>
+    <ScrollingTitle title="music "/>
     <ToolBar />
     <div id="body">
         <button>
@@ -37,6 +15,7 @@
             &blk14;&blk14;&blk14; MUSIC PAGE UNDER CONSTRUCTION &blk14;&blk14;&blk14;
         </button>
     </div>
+    <Footer />
 </main>
 
 <style>

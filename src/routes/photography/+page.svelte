@@ -1,38 +1,16 @@
 <script lang="ts">
     import ToolBar from "$lib/ToolBar.svelte";
     import PhotoTile from "$lib/PhotoTile.svelte";
-    import Title from "$lib/Title.svelte";
-    import {onDestroy, onMount} from "svelte";
-
-    let title = "photography ";
-    let titleSpace = 12;
-    let titleRoller : number;
-    let rolledTitle = "burdne.com/loading...";
-    let roll = 0;
-
-    onMount(() => {
-        titleRoller = setInterval(() => {
-            rolledTitle = "burdne.com/"
-            for (let i = 0; i < titleSpace; i++) {
-                rolledTitle += title[(roll + i) % title.length];
-            }
-            roll++;
-        }, 1000);
-    });
-
-    onDestroy(() => {
-        clearInterval(titleRoller);
-    });
+    import Dropdown from "$lib/Dropdown.svelte";
+    import ScrollingTitle from "$lib/ScrollingTitle.svelte";
+    import Footer from "$lib/Footer.svelte";
 </script>
 
-<svelte:head>
-    <title>{rolledTitle}</title>
-</svelte:head>
-
 <main>
+    <ScrollingTitle title="photography "/>
     <ToolBar />
     <div id="body">
-        <Title text="April 5th Protest [HANDS OFF]"/>
+        <Dropdown text="April 5th Protest [HANDS OFF]"/>
         <div id="section">
             <PhotoTile photo="photos/april5thProtest/_MG_5456.jpg" alt="hi"/>
             <PhotoTile photo="photos/april5thProtest/_MG_5458.jpg" alt="hi"/>
@@ -41,7 +19,7 @@
             <PhotoTile photo="photos/april5thProtest/_MG_5545.jpg" alt="hi"/>
             <PhotoTile photo="photos/april5thProtest/_MG_5548.jpg" alt="hi"/>
         </div>
-        <Title text="Winter 2025"/>
+        <Dropdown text="Winter 2025"/>
         <div id="section">
             <PhotoTile photo="photos/winter2025/_MG_5366.jpg" alt="hi"/>
             <PhotoTile photo="photos/winter2025/_MG_5368.jpg" alt="hi"/>
@@ -49,6 +27,7 @@
             <PhotoTile photo="photos/winter2025/_MG_5374.jpg" alt="hi"/>
         </div>
     </div>
+    <Footer />
 </main>
 
 <style>
@@ -56,6 +35,8 @@
         width: 650px;
     }
     #body {
+        display: flex;
+        flex-direction: column;
         background: #191919;
         margin-top: 4px;
         margin-bottom: 4px;
