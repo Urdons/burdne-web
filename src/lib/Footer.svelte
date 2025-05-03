@@ -5,8 +5,10 @@
 <div class="footer">
     <p>&ddarr; web badges &ddarr;</p>
     <div class="badgeDiv">
+        <img src="badges/burdne.png" alt="ipod mini"/>
+        <a href="mailto:wiernicki.ave@gmail.com"><img src="badges/gmailme.gif" alt="gmail me"/></a>
         <a href="https://inkscape.org"><img src="badges/inkscape.png" alt="inkscape"/></a>
-        <a href="https://mozilla.org/en-US/firefox/"><img src="badges/firefox.png" alt="firefox"/></a>
+        <!--<a href="https://mozilla.org/en-US/firefox/"><img src="badges/firefox.png" alt="firefox"/></a>/!-->
         <img src="badges/but_anime.gif" alt="i <3 anime"/>
         <a href="https://rockbox.org/"><img src="badges/userockbox.png" alt="use rockbox"/></a>
         <img src="badges/ipodmini.png" alt="ipod mini"/>

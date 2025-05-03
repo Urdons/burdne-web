@@ -20,8 +20,11 @@
         <a href="https://bsky.app/profile/burdne.bsky.social"><button>
             &apid; bluesky
         </button></a>
+        <a href="https://steamcommunity.com/id/Urdons/"><button>
+            &#x2622; steam
+        </button></a>
         <a href="https://github.com/Urdons"><button>
-            &uarr; github
+            &rarrlp; github
         </button></a>
     </div>
     <Footer/>

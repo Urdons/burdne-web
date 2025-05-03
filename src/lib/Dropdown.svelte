@@ -1,7 +1,5 @@
 <script lang="ts">
-    let { text } = $props();
-
-    let open = $state(false);
+    let { open = $bindable(false), text } = $props();
 
     function handleClick() {
         open = !open;
@@ -9,9 +7,9 @@
 </script>
 
 <button onclick={handleClick}>
-    {open ? '⇈' : '⇊'}
+    {open ? '⇊' : '⇈'}
     {text}
-    {open ? '⇈' : '⇊'}
+    {open ? '⇊' : '⇈'}
 </button>
 
 <style>
