@@ -2,9 +2,11 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import ScrollingTitle from "$lib/ScrollingTitle.svelte";
     import Footer from "$lib/Footer.svelte";
+    import Wallpaper from "$lib/Wallpaper.svelte";
 </script>
 
 <main>
+    <Wallpaper />
     <ScrollingTitle title="about "/>
     <ToolBar />
     <div id="body">
@@ -66,7 +68,7 @@
         gap: 4px;
         margin-top: 4px;
         margin-bottom: 4px;
-        background: #191919;
+        background: var(--sub-bg-bg-color);
     }
     #profileHead {
         display: grid;
@@ -81,15 +83,15 @@
     #abtme {
         line-height: 1.5;
         font-stretch: expanded;
-        background: #242424;
-        border: 1px solid #555;
+        background: var(--sub-obj-bg-color);
+        border: 1px solid var(--sub-obj-border-color);
         padding: 8px 12px;
-        color: #666;
+        color: var(--secondary-text-color);
     }
     .description {
         line-height: 1.5;
-        background: #333;
-        border: 1px solid #666;
+        background: var(--dom-obj-bg-color);
+        border: 1px solid var(--dom-obj-border-color);
         padding: 8px 12px;
     }
     b {
@@ -110,7 +112,7 @@
         left: 1px;
         width: calc(100% - 2px);
         height: calc(100% - 2px);
-        outline: 1px solid #ffffff44;
+        outline: 1px solid var(--glass-border);
         color: black;
     }
 </style>

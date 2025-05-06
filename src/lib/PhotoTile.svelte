@@ -25,7 +25,7 @@
         cursor: pointer;
         width: 100%;
         height: 100%;
-        filter: grayscale(100%) blur(2px) brightness(0.5);
+        filter: grayscale(100%) blur(2px) opacity(50%);
     }
     .photoTileImg:hover {
         filter: grayscale(0%);
@@ -40,10 +40,10 @@
         justify-content: center;
         align-items: center;
         pointer-events: none;
-        outline: 1px solid #ffffff44;
+        outline: 1px solid var(--glass-border);
     }
     button {
         background: transparent;
-        border: 1px dotted white;
+        border: 1px dotted var(--primary-text-color);
     }
 </style>

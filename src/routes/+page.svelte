@@ -2,9 +2,11 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import ScrollingTitle from "$lib/ScrollingTitle.svelte";
     import Footer from "$lib/Footer.svelte";
+    import Wallpaper from "$lib/Wallpaper.svelte";
 </script>
 
 <main>
+    <Wallpaper />
     <ScrollingTitle title="home "/>
     <ToolBar />
     <div id="body">
@@ -25,6 +27,6 @@
     #body {
         margin-top: 4px;
         margin-bottom: 4px;
-        background: #191919;
+        background: var(--sub-bg-bg-color);
     }
 </style>

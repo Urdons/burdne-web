@@ -32,8 +32,8 @@
         left: 0;
         position: sticky;
         width: 100%;
-        background-color: #191919;
+        background-color: var(--sub-bg-bg-color);
         z-index: 100;
-        box-shadow: 0 0 8px #242424;
+        box-shadow: 0 0 8px var(--dom-bg-bg-color);
     }
 </style>

@@ -14,15 +14,15 @@
 
 <style>
     button {
-        background: #333;
-        border: 1px solid #666;
+        background: var(--dom-obj-bg-color);
+        border: 1px solid var(--dom-obj-border-color);
     }
     button:hover {
-        border: 1px solid white;
+        border: 1px solid var(--primary-text-color);
     }
     button:active {
-        background: white;
-        border: 1px solid white;
-        color: black;
+        background: var(--primary-text-color);
+        border: 1px solid var(--primary-text-color);
+        color: var(--primary-text-color-inverted);
     }
 </style>

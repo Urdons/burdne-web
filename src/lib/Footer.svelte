@@ -33,8 +33,8 @@
         padding-bottom: 4px;
         bottom: 0;
         left: 0;
-        background-color: #242424;
-        border: 1px solid #555;
+        background-color: var(--sub-obj-bg-color);
+        border: 1px solid var(--sub-obj-border-color);
     }
     .badgeDiv {
         margin: 4px;
@@ -42,8 +42,8 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        background-color: #191919;
-        border: 1px solid #555;
+        background-color: var(--sub-bg-bg-color);
+        border: 1px solid var(--sub-obj-border-color);
     }
     img {
         image-rendering: pixelated;

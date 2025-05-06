@@ -4,12 +4,14 @@
     import Dropdown from "$lib/Dropdown.svelte";
     import ScrollingTitle from "$lib/ScrollingTitle.svelte";
     import Footer from "$lib/Footer.svelte";
+    import Wallpaper from "$lib/Wallpaper.svelte";
 
     let protestOpen = $state(false);
     let winterOpen = $state(false);
 </script>
 
 <main>
+    <Wallpaper />
     <ScrollingTitle title="photography "/>
     <ToolBar />
     <div id="body">
@@ -41,7 +43,7 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
-        background: #191919;
+        background: var(--sub-bg-bg-color);
         margin-top: 4px;
         margin-bottom: 4px;
     }

@@ -2,9 +2,11 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import ScrollingTitle from "$lib/ScrollingTitle.svelte";
     import Footer from "$lib/Footer.svelte";
+    import Wallpaper from "$lib/Wallpaper.svelte";
 </script>
 
 <main>
+    <Wallpaper />
     <ScrollingTitle title="links "/>
     <ToolBar />
     <div id="body">
@@ -40,23 +42,23 @@
         gap: 4px;
         margin-top: 4px;
         margin-bottom: 4px;
-        background: #191919;
+        background: var(--sub-bg-bg-color);
     }
     a {
         width: 100%;
     }
     button {
-        background: #333;
+        background: var(--dom-obj-bg-color);
         width: 100%;
-        border: 1px solid #666;
-        color: white;
+        border: 1px solid var(--dom-obj-border-color);
+        color: var(--primary-text-color);
     }
     button:hover {
-        border: 1px solid white;
+        border: 1px solid var(--primary-text-color);
     }
     button:active {
-        background: white;
-        color: black;
-        border: 1px solid white;
+        background: var(--primary-text-color);
+        color: var(--primary-text-color-inverted);
+        border: 1px solid var(--primary-text-color);
     }
 </style>

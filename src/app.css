@@ -5,11 +5,31 @@
   line-height: 1.5;
   font-weight: 400;
 
+  /* text */
+  --primary-text-color: white;
+  --primary-text-color-inverted: black;
+  --link-text-color: cadetblue;
+  --secondary-text-color: #666;
+
+  /* background */
+  --sub-bg-bg-color: #191919;
+  --dom-bg-bg-color: #242424;
+
+  /* objects */
+  --sub-obj-bg-color: #242424;
+  --sub-obj-border-color: #555;
+
+  --dom-obj-bg-color: #333;
+  --dom-obj-border-color: #666;
+
+  /* specialized */
+  --glass-border: #ffffff44;
+
   margin: 0;
   padding: 0;
 
-  background-color: #242424;
-  color: white;
+  background: var(--dom-bg-bg-color);
+  color: var(--primary-text-color);
   font-size: 14px;
 
   font-synthesis: none;
@@ -18,14 +38,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    /* text */
+    --primary-text-color: black;
+    --primary-text-color-inverted: white;
+    --link-text-color: cadetblue;
+    --secondary-text-color: #bbb;
+
+    /* background */
+    --sub-bg-bg-color: #e6e6e6;
+    --dom-bg-bg-color: #f1f1f1;
+
+    /* objects */
+    --sub-obj-bg-color: #f1f1f1;
+    --sub-obj-border-color: #ccc;
+
+    --dom-obj-bg-color: #f6f6f6;
+    --dom-obj-border-color: #bbb;
+
+    /* specialized */
+    --glass-border: #00000022;
+  }
+}
+
 body {
   display: flex;
   justify-content: center;
 }
 button {
-  background: #242424;
-  color: white;
-  border: 1px solid #555;
+  background: var(--sub-obj-bg-color);
+  color: var(--primary-text-color);
+  border: 1px solid var(--sub-obj-border-color);
   padding: 8px 12px;
   cursor: pointer;
   font-family: 'Iosevka Web', monospace;
@@ -33,15 +77,15 @@ button {
   text-wrap: pretty;
 }
 button:hover {
-  border: 1px solid white;
+  border: 1px solid var(--primary-text-color);
 }
 button:active {
-  background: white;
-  color: black;
-  border: 1px solid white;
+  background: var(--primary-text-color);
+  color: var(--primary-text-color-inverted);
+  border: 1px solid var(--primary-text-color);
 }
 a {
-  color: cadetblue;
+  color: var(--link-text-color);
   text-decoration: none;
-  font-style: oblique;
+  font-style: italic;
 }
