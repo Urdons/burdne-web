@@ -1,13 +1,12 @@
 <script lang="ts">
     import ToolBar from "$lib/ToolBar.svelte";
-    import ScrollingTitle from "$lib/ScrollingTitle.svelte";
+
     import Footer from "$lib/Footer.svelte";
     import Wallpaper from "$lib/Wallpaper.svelte";
 </script>
 
 <main>
     <Wallpaper />
-    <ScrollingTitle title="links "/>
     <ToolBar />
     <div id="body">
         <a href="https://www.youtube.com/@urdons"><button>

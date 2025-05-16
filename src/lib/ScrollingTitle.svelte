@@ -1,12 +1,13 @@
 <script lang="ts">
     let { title } = $props();
-    import {onDestroy, onMount} from "svelte";
+    //import {onDestroy, onMount} from "svelte";
 
-    let titleSpace = 12;
-    let titleRoller : number;
-    let rolledTitle = $state("burdne.com/loading...");
-    let roll = 0;
+    //let titleSpace = 12;
+    //let titleRoller : number;
+    let rolledTitle = $state("burdne → " + title);
+    //let roll = 0;
 
+    /*
     onMount(() => {
         titleRoller = setInterval(() => {
             rolledTitle = "burdne.com/"
@@ -20,6 +21,7 @@
     onDestroy(() => {
         clearInterval(titleRoller);
     });
+     */
 </script>
 
 <svelte:head>

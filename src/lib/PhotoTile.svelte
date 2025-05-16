@@ -1,9 +1,9 @@
 <script lang="ts">
-    let { photo, alt } = $props();
+    let { photo, alt, link = photo } = $props();
 </script>
 
 <div class="photoTile">
-    <a href={photo}><img class="photoTileImg" src={photo} alt={alt}></a>
+    <a href={link}><img class="photoTileImg" src={photo} alt={alt}></a>
     <div class="photoTileGlass">
         <button>
             &bigotimes; &blk34;&blk12;&blk14; open your eyes &blk14;&blk12;&blk34; &bigotimes;

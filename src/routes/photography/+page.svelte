@@ -2,7 +2,6 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import PhotoTile from "$lib/PhotoTile.svelte";
     import Dropdown from "$lib/Dropdown.svelte";
-    import ScrollingTitle from "$lib/ScrollingTitle.svelte";
     import Footer from "$lib/Footer.svelte";
     import Wallpaper from "$lib/Wallpaper.svelte";
 
@@ -12,7 +11,6 @@
 
 <main>
     <Wallpaper />
-    <ScrollingTitle title="photography "/>
     <ToolBar />
     <div id="body">
         <Dropdown bind:open={protestOpen} text="April 5th Protest [HANDS OFF]"/>

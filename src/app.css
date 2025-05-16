@@ -8,7 +8,7 @@
   /* text */
   --primary-text-color: white;
   --primary-text-color-inverted: black;
-  --link-text-color: cadetblue;
+  --link-text-color: #5f9ea0;
   --secondary-text-color: #666;
 
   /* background */
@@ -21,6 +21,9 @@
 
   --dom-obj-bg-color: #333;
   --dom-obj-border-color: #666;
+
+  --highlight-bg-color: #334040;
+  --highlight-border-color: #598080;
 
   /* specialized */
   --glass-border: #ffffff44;
@@ -43,7 +46,7 @@
     /* text */
     --primary-text-color: black;
     --primary-text-color-inverted: white;
-    --link-text-color: cadetblue;
+    --link-text-color: #5f9ea0;
     --secondary-text-color: #bbb;
 
     /* background */
@@ -56,6 +59,9 @@
 
     --dom-obj-bg-color: #f6f6f6;
     --dom-obj-border-color: #bbb;
+
+    --highlight-bg-color: #e6f2f2;
+    --highlight-border-color: #86bfbf;
 
     /* specialized */
     --glass-border: #00000022;
