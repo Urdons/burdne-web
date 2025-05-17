@@ -2,6 +2,7 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import Footer from "$lib/Footer.svelte";
     import Wallpaper from "$lib/Wallpaper.svelte";
+    import ScrollToTop from "$lib/ScrollToTop.svelte";
 </script>
 
 <main>
@@ -118,6 +119,7 @@
         </div>
     </div>
     <Footer/>
+    <ScrollToTop/>
 </main>
 
 <style>
@@ -162,18 +164,6 @@
         gap: 4px;
         background-color: var(--sub-bg-bg-color);
         border: 1px solid var(--sub-obj-border-color);
-    }
-    .textBox {
-        font-stretch: expanded;
-        line-height: 1.5;
-        background: var(--dom-obj-bg-color);
-        border: 1px solid var(--dom-obj-border-color);
-        padding: 8px 12px;
-    }
-    .textBox.sub {
-        background: var(--sub-obj-bg-color);
-        border: 1px solid var(--sub-obj-border-color);
-        color: var(--secondary-text-color);
     }
     .textBox.centered {
         text-align: center;

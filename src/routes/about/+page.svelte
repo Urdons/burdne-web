@@ -2,6 +2,7 @@
     import ToolBar from "$lib/ToolBar.svelte";
     import Footer from "$lib/Footer.svelte";
     import Wallpaper from "$lib/Wallpaper.svelte";
+    import ScrollToTop from "$lib/ScrollToTop.svelte";
 </script>
 
 <main>
@@ -54,6 +55,7 @@
         </div>
     </div>
     <Footer />
+    <ScrollToTop/>
 </main>
 
 <style>

@@ -4,6 +4,7 @@
     import Dropdown from "$lib/Dropdown.svelte";
     import Footer from "$lib/Footer.svelte";
     import Wallpaper from "$lib/Wallpaper.svelte";
+    import ScrollToTop from "$lib/ScrollToTop.svelte";
 
     let protestOpen = $state(false);
     let winterOpen = $state(false);
@@ -31,6 +32,7 @@
         </div>
     </div>
     <Footer />
+    <ScrollToTop/>
 </main>
 
 <style>

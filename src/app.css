@@ -64,7 +64,7 @@
     --highlight-border-color: #86bfbf;
 
     /* specialized */
-    --glass-border: #00000022;
+    --glass-border: #00000044;
   }
 }
 
@@ -90,8 +90,24 @@ button:active {
   color: var(--primary-text-color-inverted);
   border: 1px solid var(--primary-text-color);
 }
+button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 a {
   color: var(--link-text-color);
   text-decoration: none;
   font-style: italic;
+}
+.textBox {
+  font-stretch: expanded;
+  line-height: 1.5;
+  background: var(--dom-obj-bg-color);
+  border: 1px solid var(--dom-obj-border-color);
+  padding: 8px 12px;
+}
+.textBox.sub {
+  background: var(--sub-obj-bg-color);
+  border: 1px solid var(--sub-obj-border-color);
+  color: var(--secondary-text-color);
 }
