@@ -1,10 +1,7 @@
-<script>
-
-</script>
 
 <div class="footer">
     <p>&ddarr; web badges &ddarr;</p>
-    <div class="badgeDiv">
+    <div class="inset">
         <img src="badges/burdne.png" alt="burdne.com"/>
         <a href="mailto:wiernicki.ave@gmail.com"><img src="badges/gmailme.gif" alt="gmail me"/></a>
         <a href="https://inkscape.org"><img src="badges/inkscape.png" alt="inkscape"/></a>
@@ -36,14 +33,12 @@
         background-color: var(--sub-obj-bg-color);
         border: 1px solid var(--sub-obj-border-color);
     }
-    .badgeDiv {
+    .inset {
         margin: 4px;
         padding: 4px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        background-color: var(--sub-bg-bg-color);
-        border: 1px solid var(--sub-obj-border-color);
     }
     img {
         image-rendering: pixelated;

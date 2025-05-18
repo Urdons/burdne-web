@@ -1,0 +1,194 @@
+:root {
+  font-family: 'Iosevka Web', monospace;
+  font-stretch: expanded;
+  text-wrap: pretty;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* text */
+  --primary-text-color: white;
+  --primary-text-color-inverted: black;
+  --link-text-color: #5f9ea0;
+  --secondary-text-color: #666;
+
+  /* background */
+  --sub-bg-bg-color: #191919;
+  --dom-bg-bg-color: #242424;
+
+  /* objects */
+  --sub-obj-bg-color: #242424;
+  --sub-obj-border-color: #555;
+
+  --dom-obj-bg-color: #333;
+  --dom-obj-border-color: #666;
+
+  --highlight-bg-color: #334040;
+  --highlight-border-color: #598080;
+
+  /* specialized */
+  --glass-border: #ffffff44;
+
+  margin: 0;
+  padding: 0;
+
+  background: var(--dom-bg-bg-color);
+  color: var(--primary-text-color);
+  font-size: 14px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    /* text */
+    --primary-text-color: black;
+    --primary-text-color-inverted: white;
+    --link-text-color: #5f9ea0;
+    --secondary-text-color: #bbb;
+
+    /* background */
+    --sub-bg-bg-color: #e6e6e6;
+    --dom-bg-bg-color: #f1f1f1;
+
+    /* objects */
+    --sub-obj-bg-color: #f1f1f1;
+    --sub-obj-border-color: #ccc;
+
+    --dom-obj-bg-color: #f6f6f6;
+    --dom-obj-border-color: #bbb;
+
+    --highlight-bg-color: #e6f2f2;
+    --highlight-border-color: #86bfbf;
+
+    /* specialized */
+    --glass-border: #00000044;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  background: var(--sub-bg-bg-color);
+}
+
+div {
+  background: none;
+  border: none;
+  color: inherit;
+  .inset {
+    background-color: var(--sub-bg-bg-color);
+    border: 1px solid var(--sub-obj-border-color);
+    color: var(--secondary-text-color);
+  }
+  .special {
+    border: 1px solid var(--highlight-border-color);
+    background: var(--highlight-bg-color);
+    color: var(--primary-text-color);
+  }
+}
+
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Iosevka Web', monospace;
+  font-stretch: expanded;
+  text-wrap: pretty;
+
+  background: var(--sub-obj-bg-color);
+  color: var(--primary-text-color);
+  border: 1px solid var(--sub-obj-border-color);
+  &:hover {
+    border: 1px solid var(--primary-text-color);
+  }
+  &:active {
+    background: var(--primary-text-color);
+    color: var(--primary-text-color-inverted);
+    border: 1px solid var(--primary-text-color);
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &.dom {
+    background: var(--dom-obj-bg-color);
+    border: 1px solid var(--dom-obj-border-color);
+    color: var(--primary-text-color);
+    &:hover {
+      border: 1px solid var(--primary-text-color);
+    }
+    &:active {
+      background: var(--primary-text-color);
+      color: var(--primary-text-color-inverted);
+      border: 1px solid var(--primary-text-color);
+    }
+  }
+
+  &.special {
+    background: var(--highlight-bg-color);
+    border: 1px solid var(--highlight-border-color);
+    color: var(--primary-text-color);
+    &:hover {
+      border: 1px solid var(--primary-text-color);
+    }
+    &:active {
+      background: var(--primary-text-color);
+      color: var(--primary-text-color-inverted);
+      border: 1px solid var(--primary-text-color);
+    }
+  }
+}
+
+a {
+  color: var(--link-text-color);
+  text-decoration: none;
+  font-style: italic;
+}
+
+.textBox {
+  font-stretch: expanded;
+  line-height: 1.5;
+  padding: 8px 12px;
+
+  background: var(--dom-obj-bg-color);
+  border: 1px solid var(--dom-obj-border-color);
+  color: var(--primary-text-color);
+  &.centered {
+    text-align: center;
+  }
+  &.sub {
+    background: var(--sub-obj-bg-color);
+    border: 1px solid var(--sub-obj-border-color);
+    color: var(--secondary-text-color);
+  }
+}
+
+.imageContainer {
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+.imageContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.imageGlass {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  outline: 1px solid var(--glass-border);
+}

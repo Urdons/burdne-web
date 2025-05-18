@@ -2,9 +2,9 @@
     let { photo, alt, link = photo } = $props();
 </script>
 
-<div class="photoTile">
-    <a href={link}><img class="photoTileImg" src={photo} alt={alt}></a>
-    <div class="photoTileGlass">
+<div class="imageContainer">
+    <a href={link}><img src={photo} alt={alt}></a>
+    <div class="imageGlass">
         <button>
             &bigotimes; &blk34;&blk12;&blk14; open your eyes &blk14;&blk12;&blk34; &bigotimes;
         </button>
@@ -12,35 +12,20 @@
 </div>
 
 <style>
-    .photoTile {
-        overflow: hidden;
-        aspect-ratio: 1/1;
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    .photoTileImg {
+    img {
         transition: filter 0.2s ease-in-out;
         object-fit: cover;
         cursor: pointer;
-        width: 100%;
-        height: 100%;
         filter: grayscale(100%) blur(2px) opacity(50%);
     }
-    .photoTileImg:hover {
+    img:hover {
         filter: grayscale(0%);
     }
-    .photoTileGlass {
-        top: 1px;
-        left: 1px;
-        width: calc(100% - 2px);
-        height: calc(100% - 2px);
+    .imageGlass {
         display: flex;
-        position: absolute;
         justify-content: center;
         align-items: center;
         pointer-events: none;
-        outline: 1px solid var(--glass-border);
     }
     button {
         background: transparent;

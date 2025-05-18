@@ -1,20 +1,18 @@
 <script lang="ts">
-    //import {onDestroy, onMount} from "svelte";
+    import {onDestroy, onMount} from "svelte";
 
-    //let scroller : number;
+    let scroller : number;
     let offset = $state(0);
 
-    /*
     onMount(() => {
         scroller = setInterval(() => {
-            offset = offset + 4;
+            offset = offset + 2;
         }, 250);
     });
 
     onDestroy(() => {
         clearInterval(scroller);
     });
-    */
 </script>
 
 <div style="background-position: {offset}px {offset}px"></div>

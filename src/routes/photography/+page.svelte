@@ -1,52 +1,31 @@
 <script lang="ts">
-    import ToolBar from "$lib/ToolBar.svelte";
     import PhotoTile from "$lib/PhotoTile.svelte";
     import Dropdown from "$lib/Dropdown.svelte";
-    import Footer from "$lib/Footer.svelte";
-    import Wallpaper from "$lib/Wallpaper.svelte";
-    import ScrollToTop from "$lib/ScrollToTop.svelte";
 
     let protestOpen = $state(false);
     let winterOpen = $state(false);
 </script>
 
 <main>
-    <Wallpaper />
-    <ToolBar />
-    <div id="body">
-        <Dropdown bind:open={protestOpen} text="April 5th Protest [HANDS OFF]"/>
-        <div style="display: {protestOpen ? 'grid' : 'none'}" class="section">
-            <PhotoTile photo="photos/april5thProtest/_MG_5456.jpg" alt="hi"/>
-            <PhotoTile photo="photos/april5thProtest/_MG_5458.jpg" alt="hi"/>
-            <PhotoTile photo="photos/april5thProtest/_MG_5483.jpg" alt="hi"/>
-            <PhotoTile photo="photos/april5thProtest/_MG_5500.jpg" alt="hi"/>
-            <PhotoTile photo="photos/april5thProtest/_MG_5545.jpg" alt="hi"/>
-            <PhotoTile photo="photos/april5thProtest/_MG_5548.jpg" alt="hi"/>
-        </div>
-        <Dropdown bind:open={winterOpen} text="Winter 2025"/>
-        <div style="display: {winterOpen ? 'grid' : 'none'}" class="section">
-            <PhotoTile photo="photos/winter2025/_MG_5366.jpg" alt="hi"/>
-            <PhotoTile photo="photos/winter2025/_MG_5368.jpg" alt="hi"/>
-            <PhotoTile photo="photos/winter2025/_MG_5372.jpg" alt="hi"/>
-            <PhotoTile photo="photos/winter2025/_MG_5374.jpg" alt="hi"/>
-        </div>
+    <Dropdown bind:open={protestOpen} text="April 5th Protest [HANDS OFF]"/>
+    <div style="display: {protestOpen ? 'grid' : 'none'}" class="section">
+        <PhotoTile photo="photos/april5thProtest/_MG_5456.jpg" alt="hi"/>
+        <PhotoTile photo="photos/april5thProtest/_MG_5458.jpg" alt="hi"/>
+        <PhotoTile photo="photos/april5thProtest/_MG_5483.jpg" alt="hi"/>
+        <PhotoTile photo="photos/april5thProtest/_MG_5500.jpg" alt="hi"/>
+        <PhotoTile photo="photos/april5thProtest/_MG_5545.jpg" alt="hi"/>
+        <PhotoTile photo="photos/april5thProtest/_MG_5548.jpg" alt="hi"/>
     </div>
-    <Footer />
-    <ScrollToTop/>
+    <Dropdown bind:open={winterOpen} text="Winter 2025"/>
+    <div style="display: {winterOpen ? 'grid' : 'none'}" class="section">
+        <PhotoTile photo="photos/winter2025/_MG_5366.jpg" alt="hi"/>
+        <PhotoTile photo="photos/winter2025/_MG_5368.jpg" alt="hi"/>
+        <PhotoTile photo="photos/winter2025/_MG_5372.jpg" alt="hi"/>
+        <PhotoTile photo="photos/winter2025/_MG_5374.jpg" alt="hi"/>
+    </div>
 </main>
 
 <style>
-    main {
-        width: 650px;
-    }
-    #body {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        background: var(--sub-bg-bg-color);
-        margin-top: 4px;
-        margin-bottom: 4px;
-    }
     .section {
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         grid-gap: 4px;

@@ -2,7 +2,7 @@
 
 </script>
 
-<div class="toolbar">
+<nav>
     <a href="./"><button>
         &larr; home
     </button></a>
@@ -21,10 +21,10 @@
     <a href="/projects"><button>
         &dtdot; projects
     </button></a>
-</div>
+</nav>
 
 <style>
-    .toolbar {
+    nav {
         display: flex;
         justify-content: space-between;
         margin-top: 4px;
