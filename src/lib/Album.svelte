@@ -1,15 +1,15 @@
 <script>
-    let { coverImg, title, bandcamp = "", appleMusic = "", spotify = "", special = false } = $props();
+    let { coverImg, title, artist, bandcamp = "", appleMusic = "", spotify = "", special = false } = $props();
 
     import AlbumCover from "$lib/AlbumCover.svelte";
 </script>
 
-<div class={special ? "special" : ""}>
-    <AlbumCover cover={coverImg} title={title}/>
+<div>
+    <AlbumCover cover={coverImg} title={title} artist={artist}/>
     <div class="linkContainer">
         {#if bandcamp.length > 0}
             <a href={bandcamp} target="_blank">
-                <button>
+                <button class={special ? "special" : ""}>
                     &#x25B0;
                 </button>
             </a>
@@ -22,7 +22,7 @@
         {/if}
         {#if appleMusic.length > 0}
             <a href={appleMusic} target="_blank">
-                <button>
+                <button class={special ? "special" : ""}>
                     &#x266B;
                 </button>
             </a>
@@ -36,7 +36,7 @@
         {#if spotify.length > 0}
             <a href={spotify}
                target="_blank">
-                <button>
+                <button class={special ? "special" : ""}>
                     &cir;
                 </button>
             </a>
@@ -63,19 +63,5 @@
 
   .linkContainer a, p, button {
     width: 100%;
-  }
-
-  .special button {
-    background: var(--highlight-bg-color);
-    border: 1px solid var(--highlight-border-color);
-    color: var(--primary-text-color);
-    &:hover {
-      border: 1px solid var(--primary-text-color);
-    }
-    &:active {
-      background: var(--primary-text-color);
-      border: 1px solid var(--primary-text-color);
-      color: var(--primary-text-color-inverted);
-    }
   }
 </style>

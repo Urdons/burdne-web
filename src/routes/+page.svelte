@@ -1,3 +1,7 @@
+<script lang="ts">
+    import PersonProfile from "$lib/PersonProfile.svelte";
+</script>
+
 <main>
     <div class="textBox sub">
         &squ; home, things i like
@@ -46,104 +50,47 @@
         -> People I Like:
     </div>
     <div class="section">
-        <div class="personProfile special">
-            <div class="personTitle">
-                <div class="imageContainer">
-                    <img src="otherppl/autumn.png" alt="autumn"/>
-                    <div class="imageGlass"></div>
-                </div>
-                <div class="personName">
-                    &#x2605<b>autumn</b><br>
-                    friendo
-                </div>
-            </div>
-            <div class="personLinks">
-                <a href="https://atom596.com/" target="_blank">
-                    <button class="dom"> web</button>
-                </a>
-                <a href="https://bsky.app/profile/atom596.com" target="_blank">
-                    <button class="dom"> bsky</button>
-                </a>
-                <a href="https://github.com/EmpressAutumn" target="_blank">
-                    <button class="dom"> git</button>
-                </a>
-                <a href="https://www.youtube.com/@aAtom596" target="_blank">
-                    <button class="dom"> yt</button>
-                </a>
-            </div>
-        </div>
-        <div class="personProfile">
-            <div class="personTitle">
-                <div class="imageContainer">
-                    <img src="otherppl/blackshibe.jpg" alt="blackshibe"/>
-                    <div class="imageGlass"></div>
-                </div>
-                <div class="personName">
-                    <b>blackshibe</b><br>
-                    developer, artist
-                </div>
-            </div>
-            <div class="personLinks">
-                <a href="https://blackshibe.net/" target="_blank">
-                    <button class="dom"> web</button>
-                </a>
-                <a href="https://github.com/blackshibe/" target="_blank">
-                    <button class="dom"> git</button>
-                </a>
-                <a href="https://soundcloud.com/shibesongs" target="_blank">
-                    <button class="dom"> sndcld</button>
-                </a>
-            </div>
-        </div>
-        <div class="personProfile special">
-            <div class="personTitle">
-                <div class="imageContainer">
-                    <img src="otherppl/cope.jpg" alt="cope_ic"/>
-                    <div class="imageGlass"></div>
-                </div>
-                <div class="personName">
-                    &#x2605<b>cope_ic</b><br>
-                    friendo, artist
-                </div>
-            </div>
-            <div class="personLinks">
-                <a href="https://x.com/cope_ic" target="_blank">
-                    <button class="dom"> twt</button>
-                </a>
-                <a href="https://bsky.app/profile/copeic.bsky.social" target="_blank">
-                    <button class="dom"> bsky</button>
-                </a>
-                <a href="https://www.instagram.com/cope.thedoublefang/" target="_blank">
-                    <button class="dom"> insta</button>
-                </a>
-                <a href="https://www.tiktok.com/@cope.thedoublefang?is_from_webapp=1&sender_device=pc" target="_blank">
-                    <button class="dom"> tik</button>
-                </a>
-            </div>
-        </div>
-        <div class="personProfile special">
-            <div class="personTitle">
-                <div class="imageContainer">
-                    <img src="otherppl/hamza.jpg" alt="hamza"/>
-                    <div class="imageGlass"></div>
-                </div>
-                <div class="personName">
-                    &#x2605<b>hamza</b><br>
-                    friendo, programmer
-                </div>
-            </div>
-            <div class="personLinks">
-                <a href="https://hnasheralneam.dev/index.html" target="_blank">
-                    <button class="dom"> web</button>
-                </a>
-                <a href="https://github.com/hnasheralneam" target="_blank">
-                    <button class="dom"> git</button>
-                </a>
-                <a href="https://www.linkedin.com/in/hnasheralneam" target="_blank">
-                    <button class="dom"> linkd</button>
-                </a>
-            </div>
-        </div>
+        <PersonProfile name="autumn"
+                       pfp="otherppl/autumn.png"
+                       attributes={['friendo']}
+                       pages={[
+                           {type: 'web', link: 'https://atom596.com/'},
+                           {type: 'bsky', link: 'https://bsky.app/profile/atom596.com'},
+                           {type: 'git', link: 'https://github.com/EmpressAutumn'},
+                           {type: 'yt', link: 'https://www.youtube.com/@aAtom596'},
+                       ]}
+                       special={true}
+        />
+        <PersonProfile name="blackshibe"
+                       pfp="otherppl/blackshibe.jpg"
+                       attributes={['programmer']}
+                       pages={[
+                           {type: 'web', link: 'https://blackshibe.net/'},
+                           {type: 'git', link: 'https://github.com/blackshibe/'},
+                           {type: 'sndcld', link: 'https://soundcloud.com/shibesongs'},
+                       ]}
+        />
+        <PersonProfile name="cope"
+                       pfp="otherppl/cope.jpg"
+                       attributes={['friendo,', 'artist']}
+                       pages={[
+                           {type: 'twt', link: 'https://x.com/cope_ic'},
+                           {type: 'bsky', link: 'https://bsky.app/profile/copeic.bsky.social'},
+                           {type: 'insta', link: 'https://www.instagram.com/cope.thedoublefang/'},
+                           {type: 'tik', link: 'https://www.tiktok.com/@cope.thedoublefang?is_from_webapp=1&sender_device=pc'},
+                       ]}
+                       special={true}
+        />
+        <PersonProfile name="hamza"
+                       pfp="otherppl/hamza.jpg"
+                       attributes={['friendo,', 'artist']}
+                       pages={[
+                           {type: 'web', link: 'https://hnasheralneam.dev/index.html'},
+                           {type: 'git', link: 'https://github.com/hnasheralneam'},
+                           {type: 'linkd', link: 'https://www.linkedin.com/in/hnasheralneam'},
+                       ]}
+                       special={true}
+        />
     </div>
 </main>
 
@@ -177,47 +124,5 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-gap: 4px;
-  }
-
-  .personProfile {
-    padding: 4px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-
-    background: var(--dom-obj-bg-color);
-    border: 1px solid var(--dom-obj-border-color);
-    color: var(--primary-text-color);
-
-    &.special {
-      border: 1px solid var(--highlight-border-color);
-      background: var(--highlight-bg-color);
-    }
-  }
-
-  .personTitle {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-  }
-
-  .personName {
-    padding: 8px;
-    line-height: 1.5;
-  }
-
-  .personLinks {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    justify-content: center;
-  }
-
-  .personLinks a, button {
-    width: 100%;
-  }
-
-  .imageContainer {
-    width: 64px;
   }
 </style>

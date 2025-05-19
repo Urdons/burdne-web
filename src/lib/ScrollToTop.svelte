@@ -14,15 +14,18 @@
     }
 </script>
 
-<button onclick={top} class="dom" style="position: {show ? 'sticky' : 'relative'}">
+<button onclick={top} class="dom" style="bottom: {show ? '0' : '-64px'};">
     &Uarr;
 </button>
 
 <style>
     button {
-        margin-bottom: 4px;
-        position: relative;
-        bottom: 0;
-        left: 0;
+        transition: all 0.2s ease-in-out;
+        padding: 16px;
+        margin: 8px;
+        position: fixed;
+        bottom: -64px;
+        left: auto;
+        filter: opacity(0.8);
     }
 </style>

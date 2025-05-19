@@ -2,11 +2,19 @@
     import PhotoTile from "$lib/PhotoTile.svelte";
     import Dropdown from "$lib/Dropdown.svelte";
 
+    let springOpen = $state(true);
     let protestOpen = $state(false);
     let winterOpen = $state(false);
 </script>
 
 <main>
+    <Dropdown bind:open={springOpen} text="Spring 2025"/>
+    <div style="display: {springOpen ? 'grid' : 'none'}" class="section">
+        <PhotoTile photo="photos/spring2025/_MG_5424.jpg" alt="hi"/>
+        <PhotoTile photo="photos/spring2025/_MG_5550.jpg" alt="hi"/>
+        <PhotoTile photo="photos/spring2025/_MG_5551.jpg" alt="hi"/>
+        <PhotoTile photo="photos/spring2025/_MG_5553.jpg" alt="hi"/>
+    </div>
     <Dropdown bind:open={protestOpen} text="April 5th Protest [HANDS OFF]"/>
     <div style="display: {protestOpen ? 'grid' : 'none'}" class="section">
         <PhotoTile photo="photos/april5thProtest/_MG_5456.jpg" alt="hi"/>

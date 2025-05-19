@@ -42,7 +42,8 @@
     </section>
     <section class="textBox">
         &ac; <b>People to check out</b>:<br/>
-        <a href="https://atom596.com/">atom596.com</a>, <a href="https://hnasheralneam.dev/">hnasheralneam.dev</a>
+        <a href="https://atom596.com/" target="_blank">atom596.com</a>,
+        <a href="https://hnasheralneam.dev/" target="_blank">hnasheralneam.dev</a>
     </section>
 </main>
 

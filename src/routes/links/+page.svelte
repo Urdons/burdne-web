@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <main>
         <a href="https://www.youtube.com/@urdons" target="_blank"><button class="dom">
             &RightTriangle; youtube
