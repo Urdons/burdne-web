@@ -20,7 +20,8 @@
 
 <style>
     button {
-        transition: all 0.2s ease-in-out;
+        transition: bottom 0.2s ease-in-out;
+        z-index: 100;
         padding: 16px;
         margin: 8px;
         position: fixed;

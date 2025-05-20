@@ -39,11 +39,11 @@
                     rants ->
                 </button>
             </a>
-            <a href="/">
+            <p>
                 <button class="dom">
                     button to click
                 </button>
-            </a>
+            </p>
         </div>
     </div>
     <div class="textBox sub">
@@ -108,7 +108,7 @@
     padding: 4px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 4px;
   }
 

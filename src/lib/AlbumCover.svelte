@@ -8,6 +8,10 @@
 </a>
 
 <style>
+    .imageContainer {
+        z-index: 1;
+    }
+
     a {
         display: block;
     }

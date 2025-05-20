@@ -3,8 +3,8 @@
     import Dropdown from "$lib/Dropdown.svelte";
 
     let springOpen = $state(true);
-    let protestOpen = $state(false);
-    let winterOpen = $state(false);
+    let protestOpen = $state(true);
+    let winterOpen = $state(true);
 </script>
 
 <main>
