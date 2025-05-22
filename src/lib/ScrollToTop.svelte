@@ -20,13 +20,15 @@
 
 <style>
     button {
-        transition: bottom 0.2s ease-in-out;
+        box-shadow: 0 0 8px var(--dom-bg-bg-color);
+        transition: bottom 0.2s cubic-bezier(.29,0,0,1.41);
         z-index: 100;
         padding: 16px;
         margin: 8px;
         position: fixed;
         bottom: -64px;
         left: auto;
-        filter: opacity(0.8);
+        mix-blend-mode: difference;
+        filter: opacity(0.9);
     }
 </style>

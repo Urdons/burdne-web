@@ -13,12 +13,13 @@
 
 <style>
     img {
-        transition: filter 0.2s ease-in-out;
+        transition: filter 2s ease-in-out;
         object-fit: cover;
         cursor: pointer;
         filter: grayscale(100%) blur(2px) opacity(50%);
     }
     img:hover {
+        transition: filter 0.2s ease-in-out;
         filter: grayscale(0%);
     }
     .imageGlass {

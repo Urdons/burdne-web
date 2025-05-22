@@ -5,6 +5,7 @@
     let springOpen = $state(true);
     let protestOpen = $state(true);
     let winterOpen = $state(true);
+    let Fall2024 = $state(true);
 </script>
 
 <main>
@@ -30,6 +31,13 @@
         <PhotoTile photo="photos/winter2025/_MG_5368.jpg" alt="hi"/>
         <PhotoTile photo="photos/winter2025/_MG_5372.jpg" alt="hi"/>
         <PhotoTile photo="photos/winter2025/_MG_5374.jpg" alt="hi"/>
+    </div>
+    <Dropdown bind:open={Fall2024} text="Fall 2024"/>
+    <div style="display: {Fall2024 ? 'grid' : 'none'}" class="section">
+        <PhotoTile photo="photos/fall2024/000773260017.jpg" alt="hi"/>
+        <PhotoTile photo="photos/fall2024/000773260018.jpg" alt="hi"/>
+        <PhotoTile photo="photos/fall2024/000773260020.jpg" alt="hi"/>
+        <PhotoTile photo="photos/fall2024/000773260025.jpg" alt="hi"/>
     </div>
 </main>
 
