@@ -20,15 +20,16 @@
 
 <style>
     button {
-        box-shadow: 0 0 8px var(--dom-bg-bg-color);
-        transition: bottom 0.2s cubic-bezier(.29,0,0,1.41);
+        transition: bottom 0.2s var(--bounce-function);
         z-index: 100;
         padding: 16px;
         margin: 8px;
         position: fixed;
         bottom: -64px;
         left: auto;
-        mix-blend-mode: difference;
-        filter: opacity(0.9);
+        background: #77777744;
+        border: solid 1px #77777744;
+        color: white;
+        backdrop-filter: blur(4px);
     }
 </style>
