@@ -1,16 +1,9 @@
 <script>
-    let { coverImg, title, artist, discogs = "", bandcamp = "", appleMusic = "", spotify = "", special = false, recordColor = "transparent", recordOutline = recordColor, stickerColor = "gray" } = $props();
-
-    import AlbumCover from "$lib/AlbumCover.svelte";
+    let { discogs = "", bandcamp = "", appleMusic = "", spotify = "", special = false, children } = $props();
 </script>
 
 <div class="album">
-    <AlbumCover cover={coverImg} title={title} artist={artist}/>
-    {#if recordColor !== "transparent" }
-        <div class="record" style='--color:{recordColor}; --outline:{recordOutline};'>
-            <div class="recordSticker" style="--color:{stickerColor};"></div>
-        </div>
-    {/if}
+    {@render children()}
     <div class="linkContainer">
         {#if discogs.length > 0}
             <a href={discogs} target="_blank">
@@ -61,7 +54,7 @@
         {:else }
             <p>
                 <button disabled>
-                    &#x266B;
+                    &cir;
                 </button>
             </p>
         {/if}
@@ -69,38 +62,12 @@
 </div>
 
 <style lang="less">
+  .album:hover {
+    z-index: 5;
+  }
   div {
     border: none;
     position: relative;
-  }
-
-  .record {
-    background: linear-gradient(to top, var(--color), var(--outline));
-    border: 1px solid var(--outline);
-    position: absolute;
-    width: calc(100% - 4px);
-    aspect-ratio: 1/1;
-    border-radius: 100%;
-    top: 1px;
-    right: 1px;
-    pointer-events: none;
-    backdrop-filter: blur(4px);
-  }
-  .recordSticker {
-    background: var(--color);
-    border-radius: 100%;
-    position: absolute;
-    width: 30%;
-    aspect-ratio: 1/1;
-    top: 35%;
-    left: 35%;
-  }
-  .album:hover {
-    z-index: 10;
-    .record {
-      transition: right 0.2s var(--bounce-function);
-      right: -50%;
-    }
   }
 
   .linkContainer {
