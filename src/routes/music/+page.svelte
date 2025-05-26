@@ -126,8 +126,8 @@
         ><Record cover="https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e6/6f/17/e66f179c-599d-c7fd-fafe-bc792e2b5993/075679897121.jpg/632x632bb.webp"
                  title="After Laughter"
                  artist="Paramore"
-                 color="#fefefe"
-                 subColor="#eeeeee"
+                 color="#eeeeee"
+                 subColor="#fefefe"
                  stickerColor="#222222"
         /></Album>
         <Album discogs="https://www.discogs.com/release/8664384-Radiohead-OK-Computer"
@@ -158,8 +158,8 @@
         ><Record cover="https://f4.bcbits.com/img/a1582944245_10.jpg"
                  title="A Light For Attracting Attention"
                  artist="The Smile"
-                 color="#222222"
-                 subColor="#333333"
+                 color="#ffcc22"
+                 subColor="#ffdd33"
                  stickerColor="#fffeee"
         /></Album>
         <Album discogs="https://www.discogs.com/release/2718304-Stan-Getz-Jo%C3%A3o-Gilberto-Featuring-Antonio-Carlos-Jobim-Getz-Gilberto"

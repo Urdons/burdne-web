@@ -60,10 +60,6 @@
         gap: 4px;
     }
 
-    b {
-        font-weight: bolder;
-    }
-
     .imageContainer {
         width: 100%;
         aspect-ratio: auto;

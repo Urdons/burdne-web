@@ -6,18 +6,18 @@
     <div class="textBox sub">
         &squ; home, things i like
     </div>
-    <div class="landingZone">
+    <section class="landingZone">
         <div class="textBox centered special">
             &blk14;&blk14; Landing Zone &blk14;&blk14;
         </div>
-        <section class="textBox">
+        <div class="textBox">
             <b>Welcome</b> to my website!<br><br>
             I'm <b>burdne</b>, otherwise known as <b>burden</b>, <b>BurdenMeWithUrdons</b>, or <b>Urdons</b>. <br>
             To learn more about me, you can visit my <a href="/about">about me</a> page by clicking the link here or
             below. <br><br>
             This is my <b>landing/home page.</b> Below you will find <b>links</b> to other pages and a list of other
             people to check out.
-        </section>
+        </div>
         <div class="inset">
             <a href="/about">
                 <button class="dom">
@@ -45,7 +45,7 @@
                 </button>
             </p>
         </div>
-    </div>
+    </section>
     <div class="textBox sub">
         -> People I Like:
     </div>

@@ -26,7 +26,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background-image: url("../wallpaper.png");
+        background-image: url("/wallpaper.png");
         background-repeat: repeat;
         image-rendering: pixelated;
         background-size: 128px;

@@ -5,10 +5,39 @@
     let springOpen = $state(true);
     let protestOpen = $state(true);
     let winterOpen = $state(true);
-    let Fall2024 = $state(true);
 </script>
 
 <main>
+    <div class="textBox sub">
+        &boxbox; Photography
+    </div>
+    <section>
+        <div class="textBox">
+            <b>My Cameras</b>:<br>
+            &Cross; Canon EOS Rebel t3 (2011)<br>
+            &Cross; Asahi Pentax Spotmatic (1964)<br>
+            &Cross; Minolta Maxxum 5 (2000)<br>
+            &Cross; Polaroid Spirit 600 (1980s?)<br>
+            &Cross; Polaroid Land 250 (1967)<br>
+            <br>
+            Directly below are links to other pages featuring more photos. <br>
+            The <b>main</b> page contains digital photographs taken on my <b>Canon</b> DSLR camera. <br>
+            The <b>film</b> page contains digital scans of film photographs taken my <b>Pentax</b> or <b>Minolta</b> SLR
+            cameras.
+        </div>
+        <div class="linkContainer inset">
+            <a href="/photography/film">
+                <button class="dom">
+                    Film Photographs ->
+                </button>
+            </a>
+            <a href="/photography/AP2dArt">
+                <button class="dom">
+                    AP 2D Art Portfolio ->
+                </button>
+            </a>
+        </div>
+    </section>
     <Dropdown bind:open={springOpen} text="Spring 2025"/>
     <div style="display: {springOpen ? 'grid' : 'none'}" class="section">
         <PhotoTile photo="photos/spring2025/_MG_5424.jpg" alt="hi"/>
@@ -32,18 +61,25 @@
         <PhotoTile photo="photos/winter2025/_MG_5372.jpg" alt="hi"/>
         <PhotoTile photo="photos/winter2025/_MG_5374.jpg" alt="hi"/>
     </div>
-    <Dropdown bind:open={Fall2024} text="Fall 2024"/>
-    <div style="display: {Fall2024 ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="photos/fall2024/000773260017.jpg" alt="hi"/>
-        <PhotoTile photo="photos/fall2024/000773260018.jpg" alt="hi"/>
-        <PhotoTile photo="photos/fall2024/000773260020.jpg" alt="hi"/>
-        <PhotoTile photo="photos/fall2024/000773260025.jpg" alt="hi"/>
-    </div>
 </main>
 
 <style>
+    section {
+        display: flex;
+        flex-direction: column;
+        background: var(--dom-obj-bg-color);
+        border: 1px solid var(--dom-obj-border-color);
+        color: var(--primary-text-color);
+        gap: 4px;
+        padding: 4px;
+    }
     .section {
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         grid-gap: 4px;
+    }
+    .linkContainer {
+        padding: 4px;
+        display: flex;
+        justify-content: space-evenly;
     }
 </style>
