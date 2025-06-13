@@ -2,6 +2,7 @@
     import PhotoTile from "$lib/PhotoTile.svelte";
     import Dropdown from "$lib/Dropdown.svelte";
 
+    let summerOpen = $state(true);
     let springOpen = $state(true);
     let protestOpen = $state(true);
     let winterOpen = $state(true);
@@ -38,6 +39,12 @@
             </a>
         </div>
     </section>
+    <Dropdown bind:open={summerOpen} text="Summer 2025"/>
+    <div style="display: {summerOpen ? 'grid' : 'none'}" class="section">
+        <PhotoTile photo="photos/summer2025/_MG_5641.jpg" alt="hi"/>
+        <PhotoTile photo="photos/summer2025/_MG_5645.jpg" alt="hi"/>
+        <PhotoTile photo="photos/summer2025/_MG_5650.jpg" alt="hi"/>
+    </div>
     <Dropdown bind:open={springOpen} text="Spring 2025"/>
     <div style="display: {springOpen ? 'grid' : 'none'}" class="section">
         <PhotoTile photo="photos/spring2025/_MG_5424.jpg" alt="hi"/>
