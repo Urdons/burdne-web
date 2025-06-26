@@ -3,22 +3,22 @@
 </script>
 
 <nav>
-    <a href="./"><button>
+    <a href="./" tabindex="-1"><button>
         &larr; home
     </button></a>
-    <a href="/about"><button>
+    <a href="/about" tabindex="-1"><button>
         [&fnof;] about
     </button></a>
-    <a href="/links"><button>
+    <a href="/links" tabindex="-1"><button>
         &ac; links
     </button></a>
-    <a href="/photography"><button>
+    <a href="/photography" tabindex="-1"><button>
         &boxbox; photos
     </button></a>
-    <a href="/music"><button>
+    <a href="/music" tabindex="-1"><button>
         &bigodot; music
     </button></a>
-    <a href="/projects"><button>
+    <a href="/projects" tabindex="-1"><button>
         &dtdot; projects
     </button></a>
 </nav>

@@ -6,7 +6,7 @@
     {@render children()}
     <div class="linkContainer">
         {#if discogs.length > 0}
-            <a href={discogs} target="_blank">
+            <a href={discogs} target="_blank" tabindex="-1">
                 <button class={special ? "special" : ""}>
                     &bigodot;
                 </button>
@@ -19,7 +19,7 @@
             </p>
         {/if}
         {#if bandcamp.length > 0}
-            <a href={bandcamp} target="_blank">
+            <a href={bandcamp} target="_blank" tabindex="-1">
                 <button class={special ? "special" : ""}>
                     &#x25B0;
                 </button>
@@ -32,7 +32,7 @@
             </p>
         {/if}
         {#if appleMusic.length > 0}
-            <a href={appleMusic} target="_blank">
+            <a href={appleMusic} target="_blank" tabindex="-1">
                 <button class={special ? "special" : ""}>
                     &#x266B;
                 </button>
@@ -45,8 +45,7 @@
             </p>
         {/if}
         {#if spotify.length > 0}
-            <a href={spotify}
-               target="_blank">
+            <a href={spotify} target="_blank" tabindex="-1">
                 <button class={special ? "special" : ""}>
                     &cir;
                 </button>

@@ -24,7 +24,7 @@
             To return to the main page, click the link below
         </div>
         <div class="linkContainer inset">
-            <a href="/photography">
+            <a href="/photography" tabindex="-1">
                 <button class="dom">
                     &larr; Back to main page
                 </button>

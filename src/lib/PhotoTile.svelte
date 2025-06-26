@@ -5,7 +5,7 @@
 <div class="imageContainer">
     <a href={link}><img src={photo} alt={alt}></a>
     <div class="imageGlass">
-        <button>
+        <button tabindex="-1">
             &bigotimes; &blk34;&blk12;&blk14; open your eyes &blk14;&blk12;&blk34; &bigotimes;
         </button>
     </div>

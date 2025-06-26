@@ -27,12 +27,12 @@
             cameras.
         </div>
         <div class="linkContainer inset">
-            <a href="/photography/film">
+            <a href="/photography/film" tabindex="-1">
                 <button class="dom">
                     Film Photographs ->
                 </button>
             </a>
-            <a href="/photography/AP2dArt">
+            <a href="/photography/AP2dArt" tabindex="-1">
                 <button class="dom">
                     AP 2D Art Portfolio ->
                 </button>

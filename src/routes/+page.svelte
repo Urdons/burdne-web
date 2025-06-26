@@ -19,22 +19,22 @@
             people to check out.
         </div>
         <div class="inset">
-            <a href="/about">
+            <a href="/about" tabindex="-1">
                 <button class="dom">
                     about me ->
                 </button>
             </a>
-            <a href="/links">
+            <a href="/links" tabindex="-1">
                 <button class="dom">
                     links ->
                 </button>
             </a>
-            <a href="/photography">
+            <a href="/photography" tabindex="-1">
                 <button class="dom">
                     photography ->
                 </button>
             </a>
-            <a href="/rants">
+            <a href="/rants" tabindex="-1">
                 <button class="dom">
                     rants ->
                 </button>

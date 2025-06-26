@@ -17,7 +17,7 @@
     </div>
     <div class="links">
         {#each pages as page }
-            <a href={page.link} target="_blank">
+            <a href={page.link} target="_blank" tabindex="-1">
                 <button class="dom">{page.type}</button>
             </a>
         {/each}
