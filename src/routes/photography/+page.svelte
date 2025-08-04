@@ -44,6 +44,7 @@
         <PhotoTile photo="photos/summer2025/_MG_5641.jpg" alt="hi"/>
         <PhotoTile photo="photos/summer2025/_MG_5645.jpg" alt="hi"/>
         <PhotoTile photo="photos/summer2025/_MG_5650.jpg" alt="hi"/>
+        <PhotoTile photo="photos/summer2025/_MG_5653.jpg" alt="hi"/>
     </div>
     <Dropdown bind:open={springOpen} text="Spring 2025"/>
     <div style="display: {springOpen ? 'grid' : 'none'}" class="section">

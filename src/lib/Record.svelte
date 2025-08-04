@@ -39,7 +39,7 @@
     }
     .imageGlass {
         color: transparent;
-        cursor: pointer;
+        cursor: none;/*pointer*/
     }
     .record {
         transition: right 0.4s cubic-bezier(0,1,.5,1);

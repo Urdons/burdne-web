@@ -15,7 +15,7 @@
     img {
         transition: filter 2s ease-in-out;
         object-fit: cover;
-        cursor: pointer;
+        cursor: none;/*pointer*/
         filter: grayscale(100%) blur(2px) opacity(50%);
     }
     img:hover {

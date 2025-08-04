@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+    let { children } = $props();
     import { page } from "$app/state";
     import '../reset.css';
     import '../app.less';
@@ -6,9 +7,9 @@
     import Wallpaper from "$lib/Wallpaper.svelte";
     import Footer from "$lib/Footer.svelte";
     import ScrollToTop from "$lib/ScrollToTop.svelte";
+    import Cursor from "$lib/Cursor.svelte";
 
     const name = "burdne";
-    console.log(page.url.pathname);
 </script>
 
 <svelte:head>
@@ -18,9 +19,10 @@
 <main>
     <Wallpaper />
     <ToolBar />
-    <slot />
-    <Footer/>
-    <ScrollToTop/>
+    {@render children?.()}
+    <Footer />
+    <ScrollToTop />
+    <Cursor />
 </main>
 
 <style lang="less">
