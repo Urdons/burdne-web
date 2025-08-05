@@ -3,6 +3,7 @@
   "compatibility_date": "2025-08-05",
   "main": "src/index.ts",
   "assets": {
-    "directory": "./static/"
+    "directory": "./static/",
+    "binding": "ASSETS"
   }
 }
