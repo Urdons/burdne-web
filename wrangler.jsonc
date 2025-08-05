@@ -1,5 +1,8 @@
 {
   "name": "burdne",
   "compatibility_date": "2025-08-05",
-  "main": "src/index.ts"
+  "main": "src/index.ts",
+  "assets": {
+    "directory": "./static/"
+  }
 }
