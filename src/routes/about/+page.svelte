@@ -10,7 +10,7 @@
                 -> [&fnof;] about me
             </div>
             <div class="textBox">
-                &para; <b>Names</b>: Ave, burdne, urdons
+                &para; <b>Names</b>: burdne, Burden, Urdons
             </div>
             <div class="textBox">
                 &#x2640; <b>Pronouns</b>: She/Her, They/Them
@@ -21,10 +21,10 @@
         </div>
     </div>
     <section class="textBox">
-        -> <b>Introduction</b>:<br/> Hello, I'm Ave. I'm a Computer Science student currently studying at Anne
-        Arundel Community College and plan on transferring to a 4 year school. In my free time I work on small side
+        -> <b>Introduction</b>:<br/> Hello, I'm burdne. I'm a Computer Science student currently studying at a local
+        community college and plan on transferring to University of Maryland. In my free time I work on small side
         <a href="/projects">projects</a> (like this website), draw, and take <a href="/photography">pictures</a>.
-        I really enjoy graphic design, art, math (I know kinda random), music, and I'm ok at video games. My
+        I really enjoy graphic design, art, math, music, and I'm ok at video games. My
         favorite show of all time is Neon Genesis Evangelion and my favorite character is Rei obv.!!!!
     </section>
     <section class="textBox">

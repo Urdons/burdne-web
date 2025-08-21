@@ -11,12 +11,11 @@
             &blk14;&blk14; Landing Zone &blk14;&blk14;
         </div>
         <div class="textBox">
-            <b>Welcome</b> to my website!<br><br>
+            (^o^)/ hii! <b>Welcome</b> to my website!<br><br>
             I'm <b>burdne</b>, otherwise known as <b>burden</b>, <b>BurdenMeWithUrdons</b>, or <b>Urdons</b>. <br>
-            To learn more about me, you can visit my <a href="/about">about me</a> page by clicking the link here or
-            below. <br><br>
-            This is my <b>landing/home page.</b> Below you will find <b>links</b> to other pages and a list of other
-            people to check out.
+            Visit my <a href="/about">about me</a> page to learn more... well... about me (...obv) or explore the other
+            links below! <br>
+            The world is your oyster and so is my website! (vro what... ;_;)
         </div>
         <div class="inset">
             <a href="/about" tabindex="-1">
@@ -34,9 +33,9 @@
                     photography ->
                 </button>
             </a>
-            <a href="/rants" tabindex="-1">
+            <a href="/literature" tabindex="-1">
                 <button class="dom">
-                    rants ->
+                    lit ->
                 </button>
             </a>
             <p>

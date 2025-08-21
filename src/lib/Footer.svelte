@@ -18,9 +18,9 @@
         <img src="/badges/cancer.gif" alt="cancer"/>
         <img src="/badges/maryland.png" alt="maryland"/>
     </div>
-    <p>( font = <a href="https://typeof.net/Iosevka/">Iosevka</a>
-        && framework = <a href="https://svelte.dev/">SvelteKit</a>
-        && host = <a href="https://www.cloudflare.com/">Cloudflare</a> )</p>
+    <p>( font == <a href="https://typeof.net/Iosevka/">Iosevka</a>
+        && framework == <a href="https://svelte.dev/">SvelteKit</a>
+        && host == <a href="https://www.cloudflare.com/">Cloudflare</a> )</p>
 </div>
 
 <style>
