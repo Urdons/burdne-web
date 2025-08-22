@@ -1,6 +1,7 @@
 <script lang="ts">
     let { children } = $props();
     import { page } from "$app/state";
+    import '../Iosevka.css';
     import '../reset.css';
     import '../app.less';
     import ToolBar from "$lib/ToolBar.svelte";

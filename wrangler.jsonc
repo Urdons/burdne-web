@@ -5,5 +5,11 @@
   "assets": {
     "directory": "./static/",
     "binding": "ASSETS"
-  }
+  },
+  "routes": [
+    {
+      "pattern": "personal.burdne.com",
+      "custom_domain": true
+    }
+  ]
 }
