@@ -2,6 +2,23 @@
     import PhotoTile from "$lib/PhotoTile.svelte";
     import Dropdown from "$lib/Dropdown.svelte";
 
+    const summerImgs = import.meta.glob(
+        '/src/photos/summer2025/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+        { eager: true, query: { enhanced: true } }
+    )
+    const springImgs = import.meta.glob(
+        '/src/photos/spring2025/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+        { eager: true, query: { enhanced: true } }
+    )
+    const protestImgs = import.meta.glob(
+        '/src/photos/april5thProtest/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+        { eager: true, query: { enhanced: true } }
+    )
+    const winterImgs = import.meta.glob(
+        '/src/photos/winter2025/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+        { eager: true, query: { enhanced: true } }
+    )
+
     let summerOpen = $state(true);
     let springOpen = $state(true);
     let protestOpen = $state(true);
@@ -40,34 +57,28 @@
         </div>
     </section>
     <Dropdown bind:open={summerOpen} text="Summer 2025"/>
-    <div style="display: {summerOpen ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="photos/summer2025/_MG_5641.jpg" alt="hi"/>
-        <PhotoTile photo="photos/summer2025/_MG_5645.jpg" alt="hi"/>
-        <PhotoTile photo="photos/summer2025/_MG_5650.jpg" alt="hi"/>
-        <PhotoTile photo="photos/summer2025/_MG_5653.jpg" alt="hi"/>
+    <div style="display: {winterOpen ? 'grid' : 'none'}" class="section">
+        {#each Object.entries(summerImgs) as [_path, module]}
+            <PhotoTile photo={module.default} link={_path} alt="hi"/>
+        {/each}
     </div>
     <Dropdown bind:open={springOpen} text="Spring 2025"/>
-    <div style="display: {springOpen ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="photos/spring2025/_MG_5424.jpg" alt="hi"/>
-        <PhotoTile photo="photos/spring2025/_MG_5550.jpg" alt="hi"/>
-        <PhotoTile photo="photos/spring2025/_MG_5551.jpg" alt="hi"/>
-        <PhotoTile photo="photos/spring2025/_MG_5553.jpg" alt="hi"/>
+    <div style="display: {winterOpen ? 'grid' : 'none'}" class="section">
+        {#each Object.entries(springImgs) as [_path, module]}
+            <PhotoTile photo={module.default} link={_path} alt="hi"/>
+        {/each}
     </div>
     <Dropdown bind:open={protestOpen} text="April 5th Protest [HANDS OFF]"/>
-    <div style="display: {protestOpen ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="photos/april5thProtest/_MG_5456.jpg" alt="hi"/>
-        <PhotoTile photo="photos/april5thProtest/_MG_5458.jpg" alt="hi"/>
-        <PhotoTile photo="photos/april5thProtest/_MG_5483.jpg" alt="hi"/>
-        <PhotoTile photo="photos/april5thProtest/_MG_5500.jpg" alt="hi"/>
-        <PhotoTile photo="photos/april5thProtest/_MG_5545.jpg" alt="hi"/>
-        <PhotoTile photo="photos/april5thProtest/_MG_5548.jpg" alt="hi"/>
+    <div style="display: {winterOpen ? 'grid' : 'none'}" class="section">
+        {#each Object.entries(protestImgs) as [_path, module]}
+            <PhotoTile photo={module.default} link={_path} alt="hi"/>
+        {/each}
     </div>
     <Dropdown bind:open={winterOpen} text="Winter 2025"/>
     <div style="display: {winterOpen ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="photos/winter2025/_MG_5366.jpg" alt="hi"/>
-        <PhotoTile photo="photos/winter2025/_MG_5368.jpg" alt="hi"/>
-        <PhotoTile photo="photos/winter2025/_MG_5372.jpg" alt="hi"/>
-        <PhotoTile photo="photos/winter2025/_MG_5374.jpg" alt="hi"/>
+        {#each Object.entries(winterImgs) as [_path, module]}
+            <PhotoTile photo={module.default} link={_path} alt="hi"/>
+        {/each}
     </div>
 </main>
 

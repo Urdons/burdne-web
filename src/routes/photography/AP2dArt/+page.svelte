@@ -2,6 +2,15 @@
     import Dropdown from "$lib/Dropdown.svelte";
     import PhotoTile from "$lib/PhotoTile.svelte";
 
+    const worksImgs = import.meta.glob(
+        '/src/photos/ap2dart/works/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+        { eager: true, query: { enhanced: true } }
+    )
+    const sheetsImgs = import.meta.glob(
+        '/src/photos/ap2dart/bts/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+        { eager: true, query: { enhanced: true } }
+    )
+
     let works = $state(true);
     let sheets = $state(false);
 </script>
@@ -28,24 +37,15 @@
     </section>
     <Dropdown bind:open={works} text="Works" />
     <div style="display: {works ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="/photos/ap2dart/works/GearRatio.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/Motherboard.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/LCD.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/Groovy2.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/Viewfinder.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/FilamentTriptic.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/Hotwire.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/Tunedial.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/beyenary.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/works/Capacitance.jpg" alt="temp"/>
+        {#each Object.entries(worksImgs) as [_path, module]}
+            <PhotoTile photo={module.default} link={_path} alt="hi"/>
+        {/each}
     </div>
     <Dropdown bind:open={sheets} text="Concept Sheets and Behind-the-Scenes" />
     <div style="display: {sheets ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="/photos/ap2dart/bts/MotherboardProcessSheet2.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/bts/LCDProcessSheet2.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/bts/ViewfinderProcessSheet2.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/bts/TunedialProcessSheet2.jpg" alt="temp"/>
-        <PhotoTile photo="/photos/ap2dart/bts/BeyenaryProcessSheet.jpg" alt="temp"/>
+        {#each Object.entries(sheetsImgs) as [_path, module]}
+            <PhotoTile photo={module.default} link={_path} alt="hi"/>
+        {/each}
     </div>
 </main>
 

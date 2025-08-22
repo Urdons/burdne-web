@@ -2,7 +2,7 @@
 <main>
     <div id="profileHead">
         <div class="imageContainer">
-            <img src="pfp.png" alt="profile"/>
+            <enhanced:img src="/static/pfp.png" alt="profile"/>
             <div class="imageGlass">&Cross; PLACEHOLDER &Cross;<br/>Art by: @00_01d_ on twt.</div>
         </div>
         <div id="titleCard">

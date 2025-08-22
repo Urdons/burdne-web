@@ -2,6 +2,11 @@
     import Dropdown from "$lib/Dropdown.svelte";
     import PhotoTile from "$lib/PhotoTile.svelte";
 
+    const fall2024Imgs = import.meta.glob(
+        '/src/photos/film/fall2024/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+        { eager: true, query: { enhanced: true } }
+    )
+
     let fall2024 = $state(true);
 </script>
 
@@ -33,10 +38,9 @@
     </section>
     <Dropdown bind:open={fall2024} text="Fall 2024" />
     <div style="display: {fall2024 ? 'grid' : 'none'}" class="section">
-        <PhotoTile photo="/photos/film/fall2024/000773260017.jpg" alt="hi"/>
-        <PhotoTile photo="/photos/film/fall2024/000773260018.jpg" alt="hi"/>
-        <PhotoTile photo="/photos/film/fall2024/000773260020.jpg" alt="hi"/>
-        <PhotoTile photo="/photos/film/fall2024/000773260025.jpg" alt="hi"/>
+        {#each Object.entries(fall2024Imgs) as [_path, module]}
+            <PhotoTile photo={module.default} link={_path} alt="hi"/>
+        {/each}
     </div>
 </main>
 
